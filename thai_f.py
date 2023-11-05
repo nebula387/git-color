@@ -6,14 +6,13 @@ w = Fore.LIGHTWHITE_EX
 b = Fore.BLUE
 
 
-def flag(line, el='#'):
+def flag(el='#'):
+    line = 20
     c = [r, w, b]
-    for i in range(3):
+    ind = [0, 1, 2, 2, 1, 0]
+    print('Thai')
+    for i in ind:
         print(c[i] + el * line)
+    print(w + '_#_')
 
-    c = c[::-1]
-    for i in range(3):
-        print(c[i] + el * line)
-
-
-flag(25, el='W')
+flag(el='W')
