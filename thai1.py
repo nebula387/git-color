@@ -14,6 +14,6 @@ def flag(el='#'):
     print('Thai')
     for i in ind:
         print(c[i] + el * line + rs)
-    print(w + '_#_')
+    print('_#_')
 
 flag(el=' ')

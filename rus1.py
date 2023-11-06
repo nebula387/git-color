@@ -12,6 +12,6 @@ def shift(line=30, side=3, el='#'):
     for i in range(side):
         for e in range(side):
             print(c[i] + el * line + rs)
-    print(w + '_#_')
+    print('_#_')
 
 shift(el=' ')

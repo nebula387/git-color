@@ -8,6 +8,7 @@ rs = Style.RESET_ALL
 
 def usa():
     sim = ' '
+    print('USA')
     for i in range(13):
         if i % 2 and i < 7:
             print(b + ' *' * 7 + ' ' + w + sim * 30 + rs)
@@ -17,6 +18,7 @@ def usa():
             print(w + sim * 45 + rs)
         else:
             print(r + sim * 45 + rs)
+    print('_#_')
 
 
 usa()
