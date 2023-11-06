@@ -5,7 +5,7 @@ r = Fore.RED
 w = Fore.LIGHTWHITE_EX
 b = Fore.BLUE
 
-def am():
+def usa():
     print('USA')
     for i in range(13):
         if i % 2 and i < 7:
@@ -18,4 +18,4 @@ def am():
             print(r + 'W' * 45)
     print(w + '_#_')
 
-am()
+usa()
