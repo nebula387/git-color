@@ -5,18 +5,20 @@ r = Back.RED
 w = Back.LIGHTWHITE_EX
 b = Back.BLUE
 rs = Style.RESET_ALL
-col = [b, w, r]
 
-def france(s):
-    row = 9
-    line = 10
-    sym = ' '
-    print('FR')
-    for i in range(row):
-        for e in s:
-            print(e+sym*line+rs, end='')
-        print()
+
+def flag(c, f):
+    print(c)
+    f()
     print('_#_')
 
 
-france(col)
+def france():
+    s = [b, w, r]
+    for i in range(9):
+        for e in s:
+            print(e+' '*10+rs, end='')
+        print()
+
+
+flag('FR', france)
