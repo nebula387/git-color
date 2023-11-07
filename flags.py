@@ -17,7 +17,7 @@ def france():
     print('FR')
     for i in range(9):
         for e in c:
-            print(e + ' ' * 12 + rs, end='')
+            print(e + ' ' * 10 + rs, end='')
         print()
 
 
@@ -50,7 +50,7 @@ def rus():
     print('Rus')
     for i in range(3):
         for e in range(3):
-            print(c[i] + ' ' * 36 + rs)
+            print(c[i] + ' ' * 30 + rs)
 
 
 countries = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france}
