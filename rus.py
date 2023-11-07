@@ -1,17 +1,17 @@
-from colorama import init, Fore
+from colorama import init, Back, Style
 
 init()
-r = Fore.RED
-w = Fore.WHITE
-b = Fore.BLUE
-
+r = Back.RED
+w = Back.LIGHTWHITE_EX
+b = Back.BLUE
+rs = Style.RESET_ALL
 
 def shift(line=30, side=3, el='#'):
     print('Rus')
-    c = ['', b, r]
+    c = [w, b, r]
     for i in range(side):
         for e in range(side):
-            print(c[i] + el * line)
-    print(w + '_#_')
+            print(c[i] + el * line + rs)
+    print('_#_')
 
-shift(el='W')
+shift(el=' ')

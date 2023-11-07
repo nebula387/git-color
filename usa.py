@@ -1,21 +1,24 @@
-from colorama import init, Fore
+from colorama import init, Back, Style
 
 init()
-r = Fore.RED
-w = Fore.LIGHTWHITE_EX
-b = Fore.BLUE
+r = Back.RED
+w = Back.LIGHTWHITE_EX
+b = Back.BLUE
+rs = Style.RESET_ALL
 
 def usa():
+    sim = ' '
     print('USA')
     for i in range(13):
         if i % 2 and i < 7:
-            print(b + ' *'* 7 + ' ' + w + 'W'*30)
-        elif i % 2 != True and i < 7:
-            print(b + '* ' * 7 + ' ' + r + 'W' * 30)
+            print(b + ' *' * 7 + ' ' + w + sim * 30 + rs)
+        elif i % 2 == 0 and i < 7:
+            print(b + '* ' * 7 + ' ' + r + sim * 30 + rs)
         elif i % 2:
-            print(w + 'W'* 45)
+            print(w + sim * 45 + rs)
         else:
-            print(r + 'W' * 45)
-    print(w + '_#_')
+            print(r + sim * 45 + rs)
+    print('_#_')
+
 
 usa()
