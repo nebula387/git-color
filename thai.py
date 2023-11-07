@@ -7,13 +7,19 @@ b = Back.BLUE
 rs = Style.RESET_ALL
 
 
-def flag(el='#'):
-    line = 20
-    c = [r, w, b]
-    ind = [0, 1, 2, 2, 1, 0]
-    print('Thai')
-    for i in ind:
-        print(c[i] + el * line + rs)
+def flag(c, f):
+    print(c)
+    f()
     print('_#_')
 
-flag(el=' ')
+
+def thai():
+    line = 40
+    c = [r, w, b]
+    ind = [0, 1, 2, 2, 1, 0]
+    for e in ind:
+        for i in range(2):
+            print(c[e] + ' ' * line + rs)
+
+
+flag('Thai', thai)
