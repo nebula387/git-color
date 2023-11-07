@@ -12,7 +12,7 @@ def usa():
     for i in range(13):
         if i % 2 and i < 7:
             print(b + ' *' * 7 + ' ' + w + sim * 30 + rs)
-        elif i % 2 != True and i < 7:
+        elif i % 2 == 0 and i < 7:
             print(b + '* ' * 7 + ' ' + r + sim * 30 + rs)
         elif i % 2:
             print(w + sim * 45 + rs)
