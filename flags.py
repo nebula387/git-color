@@ -17,7 +17,7 @@ def france():
     print('FR')
     for i in range(9):
         for e in c:
-            print(e + ' ' * 10 + rs, end='')
+            print(e + ' ' * 12 + rs, end='')
         print()
 
 
@@ -50,11 +50,17 @@ def rus():
     print('Rus')
     for i in range(3):
         for e in range(3):
-            print(c[i] + ' ' * 30 + rs)
+            print(c[i] + ' ' * 36 + rs)
 
 
-# country = input()
-flag(usa)
-flag(thai)
-flag(france)
-flag(rus)
+countries = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france}
+print('rus,', 'usa,', 'thai,', 'france,', '"stop"')
+
+while True:
+    cp = input('Input country: ')
+    if cp in countries.keys():
+        flag(countries[cp])
+    elif cp == 'stop':
+        break
+    else:
+        print(countries.keys())
