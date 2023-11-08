@@ -8,13 +8,13 @@ rs = Style.RESET_ALL
 
 
 def flag(f):
+    print(cp)
     f()
     print('_#_')
 
 
 def france():
     c = [b, w, r]
-    print('FR')
     for i in range(9):
         for e in c:
             print(e + ' ' * 10 + rs, end='')
@@ -24,7 +24,6 @@ def france():
 def thai():
     line = 40
     c = [r, w, b]
-    print('Thai')
     ind = [0, 1, 2, 2, 1, 0]
     for e in ind:
         for i in range(2):
@@ -33,7 +32,6 @@ def thai():
 
 def usa():
     s = ' '
-    print('USA')
     for i in range(13):
         if i % 2 and i < 7:
             print(b + ' *' * 7 + s + w + s * 30 + rs)
@@ -47,14 +45,20 @@ def usa():
 
 def rus():
     c = [w, b, r]
-    print('Rus')
     for i in range(3):
         for e in range(3):
             print(c[i] + ' ' * 30 + rs)
 
 
-countries = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france}
-print('rus,', 'usa,', 'thai,', 'france,', '"stop"')
+def indonesia():
+    c = [r, w]
+    for i in range(2):
+        for e in range(5):
+            print(c[i] + ' ' * 30 + rs)
+
+
+countries = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france, 'indonesia': indonesia}
+print('rus,', 'usa,', 'thai,', 'france,', 'indonesia,', '"stop"')
 
 while True:
     cp = input('Input country: ')
