@@ -1,9 +1,13 @@
-from colorama import init, Back, Style
+from colorama import init, Back, Style, Fore
 
 init()
 r = Back.RED
 w = Back.LIGHTWHITE_EX
 b = Back.BLUE
+y = Back.YELLOW
+fr = Fore.RED
+fg = Fore.GREEN
+fy = Fore.YELLOW
 rs = Style.RESET_ALL
 
 
@@ -68,8 +72,12 @@ def sweden():
             print(s + "\033[0m", end='')
         print()
 
+def congo( el='@'):
+    for i in range(10):
+        print(fg + el * (27 - (i*3)) + fy + el * 5 + fr + el*(i*3), rs)
+
 country = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france,
- 'indonesia': indonesia, 'sweden': sweden}
+ 'indonesia': indonesia, 'sweden': sweden, 'congo': congo}
 # print('rus,', 'usa,', 'thai,', 'france,', 'indonesia,', '"stop"')
 dictkeys = [i for i in country.keys()]
 
