@@ -57,14 +57,24 @@ def indonesia():
             print(c[i] + ' ' * 30 + rs)
 
 
-countries = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france, 'indonesia': indonesia}
-print('rus,', 'usa,', 'thai,', 'france,', 'indonesia,', '"stop"')
+country = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france,
+ 'indonesia': indonesia}
+# print('rus,', 'usa,', 'thai,', 'france,', 'indonesia,', '"stop"')
+dictkeys = [i for i in country.keys()]
+
+def outline():
+    def inner():
+        print(dictkeys, '\n', '"stop" to exit')
+    return inner
+
+out = outline()
+out()
 
 while True:
     cp = input('Input country: ')
-    if cp in countries.keys():
-        flag(countries[cp])
+    if cp in country.keys():
+        flag(country[cp])
     elif cp == 'stop':
         break
     else:
-        print(countries.keys())
+        print(out())
