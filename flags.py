@@ -57,8 +57,19 @@ def indonesia():
             print(c[i] + ' ' * 30 + rs)
 
 
+def sweden():
+    c = 10
+    for i in range(c):
+        for e in range(c+5):
+            if 3 < e < (c-4) or 3 < i < (c-4):
+                s = "\033[43m" + '  '
+            else:
+                s = "\033[44m" + '  '
+            print(s + "\033[0m", end='')
+        print()
+
 country = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france,
- 'indonesia': indonesia}
+ 'indonesia': indonesia, 'sweden': sweden}
 # print('rus,', 'usa,', 'thai,', 'france,', 'indonesia,', '"stop"')
 dictkeys = [i for i in country.keys()]
 
