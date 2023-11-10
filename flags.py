@@ -41,13 +41,13 @@ def usa():
     s = ' '
     for i in range(13):
         if i % 2 and i < 7:
-            print(b + ' *' * 7 + s + w + s * 30 + rs)
+            print(b + ' *' * 7 + s + w + s * 27 + rs)
         elif i % 2 == 0 and i < 7:
-            print(b + '* ' * 7 + s + r + s * 30 + rs)
+            print(b + '* ' * 7 + s + r + s * 27 + rs)
         elif i % 2:
-            print(w + s * 45 + rs)
+            print(w + s * 42 + rs)
         else:
-            print(r + s * 45 + rs)
+            print(r + s * 42 + rs)
 
 
 def rus():
