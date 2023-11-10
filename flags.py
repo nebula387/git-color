@@ -8,6 +8,9 @@ y = Back.YELLOW
 fr = Fore.RED
 fg = Fore.GREEN
 fy = Fore.YELLOW
+fb = Fore.BLUE
+fw = Fore.LIGHTWHITE_EX
+fbl = Fore.BLACK
 rs = Style.RESET_ALL
 
 
@@ -76,8 +79,24 @@ def congo( el='@'):
     for i in range(10):
         print(fg + el * (27 - (i*3)) + fy + el * 5 + fr + el*(i*3), rs)
 
+def czech( el='@'):
+    for i in range(10):
+        if i < 5:
+            print(fb + el * (i*3) + fw + (el *(27 -i*3)), rs)
+        else:
+            print(fb + el * (27 - i * 3) + fr + (el * (i * 3)), rs)
+
+def guyana( el='@'):
+    for i in range(11):
+        if i <= 5:
+            print(fr + el * (i*3) + fbl +el + fy + el * i*3 + fw + el + fg + (el *(30 -i*6)), rs)
+        else:
+            print(fr + el * (27 - (i-1) * 3) + fbl + el + fy + el * (27 - (i-1)*3) + fw + el + fg + (el * ((i-5) * 6)), rs)
+
+
 country = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france,
- 'indonesia': indonesia, 'sweden': sweden, 'congo': congo}
+ 'indonesia': indonesia, 'sweden': sweden, 'congo': congo, 'czech': czech,
+'guyana': guyana}
 # print('rus,', 'usa,', 'thai,', 'france,', 'indonesia,', '"stop"')
 dictkeys = [i for i in country.keys()]
 
