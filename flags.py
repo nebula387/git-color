@@ -5,6 +5,8 @@ r = Back.RED
 w = Back.LIGHTWHITE_EX
 b = Back.BLUE
 y = Back.YELLOW
+g = Back.GREEN
+bl = Back.BLACK
 fr = Fore.RED
 fg = Fore.GREEN
 fy = Fore.YELLOW
@@ -94,15 +96,28 @@ def guyana(el=chr(11203)):
             print(fr + el * (27 - (i-1) * 3) + fbl + el + fy + el * (27 - (i-1)*3) + fw + el + fg + (el * ((i-5) * 6)), rs)
 
 
+def dubai(sym=' '):
+    for i in range(9):
+        if i < 3:
+            print(r + sym * 8 + g + sym * 21, rs)
+        elif 2 < i < 6:
+            print(r + sym * 8 + w + sym * 21, rs)
+        else:
+            print(r + sym * 8 + bl + sym * 21, rs)
+
 country = {'rus': rus, 'usa': usa, 'thai': thai, 'france': france,
  'indonesia': indonesia, 'sweden': sweden, 'congo': congo, 'czech': czech,
-'guyana': guyana}
+'guyana': guyana, 'dubai': dubai}
 # print('rus,', 'usa,', 'thai,', 'france,', 'indonesia,', '"stop"')
 dictkeys = [i for i in country.keys()]
 
 def outline():
     def inner():
-        print(dictkeys, '\n', '"stop" to exit')
+        for i, e in enumerate(dictkeys):
+            print(e + ', ', end='')
+            if (i + 1) % 5 == 0:
+                print()
+        print('"stop" to exit')
     return inner
 
 out = outline()
