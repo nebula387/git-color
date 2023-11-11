@@ -75,18 +75,18 @@ def sweden():
             print(s + "\033[0m", end='')
         print()
 
-def congo( el='@'):
+def congo( el=chr(11203)):
     for i in range(10):
         print(fg + el * (27 - (i*3)) + fy + el * 5 + fr + el*(i*3), rs)
 
-def czech( el='@'):
+def czech( el=chr(11203)):
     for i in range(10):
         if i < 5:
             print(fb + el * (i*3) + fw + (el *(27 -i*3)), rs)
         else:
             print(fb + el * (27 - i * 3) + fr + (el * (i * 3)), rs)
 
-def guyana( el='@'):
+def guyana(el=chr(11203)):
     for i in range(11):
         if i <= 5:
             print(fr + el * (i*3) + fbl +el + fy + el * i*3 + fw + el + fg + (el *(30 -i*6)), rs)
